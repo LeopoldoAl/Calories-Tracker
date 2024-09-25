@@ -19,4 +19,6 @@ export const activityReducer = (
         // This code works the logic for updating the State
         console.log('From the Type in save-activity')
     }
+
+    return state
 }
