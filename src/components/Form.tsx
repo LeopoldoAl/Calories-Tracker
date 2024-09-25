@@ -74,7 +74,7 @@ export default function Form() {
         <input 
             type="submit" 
             className="bg-gray-800 hover:bg-gray-900 w-full p-2 font-bold uppercase text-white cursor-pointer disabled:opacity-10"
-        value="Save Food or Save Exercise"
+        value={activity.category === 1 ? 'Save Food' : 'Save Exercise'}
         disabled={!isValidActivity()}
         />
 
