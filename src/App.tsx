@@ -22,6 +22,7 @@ function App() {
           {/* Form here */}
           <Form
             dispatch={dispatch}
+            state={state}
           />
         </div>
       </section>
