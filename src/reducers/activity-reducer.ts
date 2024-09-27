@@ -20,10 +20,17 @@ export const activityReducer = (
 ) => {
     if (action.type === 'save-activity') {
         // This code works the logic for updating the State
-        
+
+        let updatedAtivitis: Activity[] = []
+        if (state.activeId) {
+            updatedAtivitis = state.activities.map( activity => activity.id === state.activeId ? action.payload.newActivity : activity)
+        } else{
+            updatedAtivitis = [...state.activities, action.payload.newActivity]
+        }
         return {
             ...state,
-            activities: [...state.activities, action.payload.newActivity]
+            activities: updatedAtivitis,
+            activeId: ''
         }
     }
 
